@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Eniola – Shopify Store Design &amp; E-commerce Services</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Inter:wght@400;500;600&family=Caveat:wght@500&display=swap" rel="stylesheet">
+<style>
+/* EDIT: replace anything in [brackets] (class "ph") with your real details. */
+:root{--bg:#F4F2EE;--bg2:#FBFAF8;--ink:#161616;--muted:#6B665E;--line:#DAD6CD;--dark:#1B1B1B;--on-ink:#fff;
+  color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141413;--bg2:#1B1B19;--ink:#F2EFE9;--muted:#A5A096;--line:#33312C;--dark:#0C0C0C;--on-ink:#141413;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#141413;--bg2:#1B1B19;--ink:#F2EFE9;--muted:#A5A096;--line:#33312C;--dark:#0C0C0C;--on-ink:#141413;color-scheme:dark}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-behavior:smooth;scroll-padding-top:5rem}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 1rem/1.65 Inter,system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:inherit}:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:6px}
+.w{max-width:1200px;margin:0 auto;padding:0 1.5rem}
+.ph{border-bottom:1.5px dashed #B08A4F}
+h1,h2,h3{font-family:Newsreader,Georgia,serif;font-weight:500;letter-spacing:-.025em;line-height:1.05;margin:0}
+.eye{font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;margin:0 0 1rem;font-weight:500}
+.btn{display:inline-flex;gap:.6rem;align-items:center;padding:.85rem 1.5rem;border-radius:99px;font-weight:500;font-size:.92rem;text-decoration:none;background:var(--ink);color:var(--on-ink);border:1px solid var(--ink);cursor:pointer;font-family:inherit;transition:opacity .2s}
+.btn:hover{opacity:.85}.btn.o{background:transparent;color:var(--ink);border-color:var(--ink)}
+.nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);padding-top:env(safe-area-inset-top,0px)}
+.nav .w{display:flex;justify-content:space-between;align-items:center;height:4.5rem}
+.logo{display:flex;align-items:center;gap:.7rem;font-weight:600;font-size:1.2rem;text-decoration:none}
+.logo b{width:1.9rem;height:2.1rem;background:var(--ink);border-radius:.3rem .3rem .6rem .6rem;position:relative}
+.logo b::after{content:"";position:absolute;left:.45rem;right:.45rem;top:.3rem;height:.7rem;border:2px solid var(--on-ink);border-bottom:0;border-radius:.6rem .6rem 0 0}
+.nav ul{display:flex;gap:2.25rem;list-style:none;margin:0;padding:0;font-size:.92rem}
+.nav ul a{text-decoration:none;padding-bottom:.4rem}.nav ul a:hover{border-bottom:2px solid var(--ink)}
+.hero{background:radial-gradient(900px 420px at 75% 40%,var(--bg2),transparent 70%)}
+.hero .w{display:grid;grid-template-columns:1fr 1.05fr;gap:2rem;align-items:center;padding-top:clamp(2rem,5vw,4rem);padding-bottom:clamp(2.5rem,6vw,5rem)}
+.hero h1{font-size:clamp(2.7rem,6vw,4.6rem);margin-bottom:1.5rem}
+.hero p.l{max-width:30rem;color:var(--ink);margin:0 0 2rem}
+.row{display:flex;gap:.75rem;flex-wrap:wrap}
+.scene{position:relative;padding:1rem 3rem 1.5rem 0;min-height:18rem}
+.lap{background:#232323;border:.5rem solid #2b2b2b;border-bottom-width:.9rem;border-radius:1rem 1rem .3rem .3rem;box-shadow:0 30px 60px #0003}
+.scr{background:linear-gradient(105deg,#CDBBA5 0,#B59F85 45%,#8C7761 100%);aspect-ratio:16/10;position:relative;overflow:hidden;color:#fff;padding:7% 7%}
+.scr .tb{position:absolute;left:0;right:0;top:0;height:11%;background:#FBFAF8}
+.scr h4,.mini h4{font:500 clamp(1rem,2.2vw,1.7rem)/1.1 Newsreader,Georgia,serif;margin:14% 0 .4rem;max-width:11rem}
+.scr small{display:block;font-size:.7rem;opacity:.9}.scr em{display:inline-block;margin-top:.8rem;background:#fff;color:#222;font-style:normal;font-size:.6rem;padding:.3rem .8rem}
+.scr .sofa{position:absolute;right:6%;bottom:8%;width:42%;height:42%;background:#EBE4D8;border-radius:1.2rem 1.2rem .5rem .5rem}
+.scr .tbl{position:absolute;right:20%;bottom:6%;width:22%;height:12%;background:#D9B98C;border-radius:50%}
+.phone{position:absolute;right:0;bottom:0;width:23%;aspect-ratio:9/19;background:#fff;border:.35rem solid #161616;border-radius:1.4rem;overflow:hidden;box-shadow:0 20px 40px #0004}
+.phone .mini{height:62%;background:linear-gradient(160deg,#CDBBA5,#8C7761);color:#fff;padding:.6rem}.phone .mini h4{font-size:.8rem;margin-top:35%}
+.phone .th{display:grid;grid-template-columns:1fr 1fr;gap:.3rem;padding:.4rem}.phone .th i{aspect-ratio:1;background:#E8E1D5}
+.note{position:absolute;right:0;top:-.5rem;font:500 1.35rem/1.15 Caveat,cursive;transform:rotate(-8deg);color:var(--ink)}
+section{padding:clamp(3rem,7vw,5.5rem) 0 0}
+.sh{display:flex;justify-content:space-between;align-items:flex-end;gap:1rem;margin-bottom:2rem}
+.sh h2{font-size:clamp(2rem,4.4vw,3.2rem)}
+.work{display:grid;grid-template-columns:repeat(4,1fr);gap:1.25rem}
+.case{text-decoration:none}
+.pic{aspect-ratio:4/3;border:1px solid var(--line);background:var(--bg2);position:relative;overflow:hidden;padding:1rem;margin-bottom:1rem}
+.pic .s{height:100%;position:relative;padding:.9rem;color:#2a2420}
+.pic .s h4{font:500 1.05rem/1.1 Newsreader,Georgia,serif;margin:1.2rem 0 .3rem;max-width:7rem}.pic .s i{display:block;width:2.2rem;height:.9rem;background:#161616;margin-top:.6rem}
+.pic .s u{position:absolute;right:.6rem;bottom:.6rem;width:42%;height:60%;border-radius:.8rem;background:var(--c2)}
+.pic .m{position:absolute;right:.6rem;bottom:.5rem;width:22%;aspect-ratio:9/19;border:.25rem solid #161616;border-radius:.9rem;background:var(--c1)}
+.f{--c1:#E6CBA6;--c2:#C79F76}.b{--c1:#F0C9C7;--c2:#E3AFAD}.e{--c1:#2A2A2A;--c2:#555}.e .s{color:#fff}.h{--c1:#E6DBC9;--c2:#B9A07C}
+.f .s{background:linear-gradient(100deg,#EDE3D6,#D9C3A5)}.b .s{background:linear-gradient(100deg,#F6DCD9,#EBB9B6)}.e .s{background:#151515}.h .s{background:linear-gradient(100deg,#EFE8DC,#D5C5AA)}
+.case small{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase}
+.case h3{font-size:1.25rem;margin:.2rem 0}.case p{margin:.2rem 0 .8rem;color:var(--muted);font-size:.9rem}
+.case span.lnk{font-size:.85rem;border-bottom:1px solid var(--ink)}
+.svc{background:var(--dark);color:#fff;margin-top:clamp(3rem,7vw,5.5rem);padding:clamp(3rem,6vw,4.5rem) 0}
+.svc .top{display:grid;grid-template-columns:1fr 2.4fr;gap:2.5rem;align-items:start}
+.svc h2{font-size:clamp(2rem,4vw,3rem)}.svc .eye{color:#A9A39A}
+.sg{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem 1.75rem}
+.sg div{border-top:1px solid #3A3A3A;padding-top:1rem}.sg h3{font:500 1rem/1.3 Inter,sans-serif;letter-spacing:0;margin-bottom:.3rem}.sg p{margin:0;color:#A9A39A;font-size:.85rem}
+.sn{grid-column:2;margin:2rem 0 0;color:#A9A39A;font-size:.9rem}
+.proc{display:grid;grid-template-columns:repeat(5,1fr);gap:1.25rem;counter-reset:s}
+.proc div{counter-increment:s;border-top:1px solid var(--ink);padding-top:1rem}
+.proc div::before{content:counter(s,decimal-leading-zero);font:500 1.5rem Newsreader,serif;color:var(--muted)}
+.proc h3{font-size:1.3rem;margin:.4rem 0}.proc p{margin:0;color:var(--muted);font-size:.92rem}
+.about{display:grid;grid-template-columns:.7fr 1.3fr;gap:3.5rem;align-items:center}
+.me{aspect-ratio:4/5;background:var(--bg2);border:1px solid var(--line);display:grid;place-items:center;text-align:center;padding:1rem;color:var(--muted)}
+.about h2{font-size:clamp(2rem,4vw,3rem);margin-bottom:1rem}.about p{color:var(--muted);max-width:36rem}
+details{border-top:1px solid var(--line);padding:1.1rem 0}details:last-of-type{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;font:500 1.2rem Newsreader,serif;list-style:none;display:flex;justify-content:space-between}summary::after{content:"+"}details[open] summary::after{content:"–"}
+details p{margin:.6rem 0 0;color:var(--muted)}
+.cta{background:var(--dark);color:#fff;padding:clamp(2rem,6vw,4.5rem);display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;margin-bottom:3rem}
+.cta h2{font-size:clamp(2rem,4.4vw,3.2rem);margin-bottom:1rem}.cta p{color:#B8B2A8}
+.cta .btn{background:#fff;color:#161616;border-color:#fff}
+form{display:grid;gap:.8rem}label{font-size:.85rem;color:#B8B2A8}
+input,select,textarea{width:100%;margin-top:.3rem;padding:.8rem 1rem;border:1px solid #444;background:#242424;color:#fff;font:inherit;border-radius:.3rem}
+textarea{min-height:6rem;resize:vertical}
+footer{padding:0 0 2.5rem;color:var(--muted);font-size:.9rem;text-align:center}
+@media (max-width:960px){.hero .w,.about,.cta,.svc .top{grid-template-columns:1fr}.work{grid-template-columns:1fr 1fr}.proc{grid-template-columns:1fr 1fr}.nav li:not(:last-child){display:none}.sn{grid-column:1}.me{max-width:18rem}}
+@media (max-width:600px){.work,.sg,.proc{grid-template-columns:1fr}.scene{padding-right:1.5rem}.nav ul{gap:0}.nav .w{gap:1rem}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<header class="nav"><div class="w"><a class="logo" href="#top"><b aria-hidden="true"></b>Eniola</a>
+<nav aria-label="Main"><ul><li><a href="#top">Home</a></li><li><a href="#services">Services</a></li><li><a href="#work">Portfolio</a></li><li><a href="#about">About</a></li><li><a href="#contact">Contact</a></li></ul></nav>
+<a class="btn" href="#contact">Start a Project &rarr;</a></div></header>
+
+<main id="top">
+<div class="hero"><div class="w">
+  <div>
+    <p class="eye">Shopify store design &amp; e-commerce services</p>
+    <h1>Shopify Stores Designed to Make Your Brand Stand Out.</h1>
+    <p class="l">I design professional Shopify storefronts that bring your products to life, strengthen your brand presence, and create smoother shopping experiences for your customers.</p>
+    <div class="row"><a class="btn" href="#contact">Start a Project &rarr;</a><a class="btn o" href="#work">View My Work</a></div>
+  </div>
+  <div class="scene" aria-hidden="true">
+    <div class="note">Beautiful stores.<br>Better experiences.</div>
+    <div class="lap" style="margin-top:2.5rem"><div class="scr"><div class="tb"></div><h4>Modern Essentials for Everyday Living</h4><small>Quality. Style. Comfort.</small><em>Shop Now</em><span class="sofa"></span><span class="tbl"></span></div></div>
+    <div class="phone"><div class="mini"><h4>Modern Essentials</h4></div><div class="th"><i></i><i></i></div></div>
+  </div>
+</div></div>
+
+<div class="w">
+<section id="work" style="padding-top:2rem">
+  <div class="sh"><div><p class="eye">Selected portfolio</p><h2>Recent Shopify Projects</h2></div><span class="ph" style="font-size:.85rem">[Replace samples with your real projects]</span></div>
+  <div class="work">
+    <a class="case f" href="#contact"><div class="pic"><div class="s"><h4>Timeless Fashion for Modern You</h4><i></i><u></u></div><div class="m"></div></div><small>Fashion</small><h3><span class="ph">[Project name]</span></h3><p>Homepage, collection and product page design.</p><span class="lnk">View case study &rarr;</span></a>
+    <a class="case b" href="#contact"><div class="pic"><div class="s"><h4>Healthy Skin Starts Here</h4><i></i><u></u></div><div class="m"></div></div><small>Beauty</small><h3><span class="ph">[Project name]</span></h3><p>Soft, clean design for a skincare catalog.</p><span class="lnk">View case study &rarr;</span></a>
+    <a class="case e" href="#contact"><div class="pic"><div class="s"><h4>Premium Audio for a Better You</h4><i style="background:#fff"></i><u></u></div><div class="m"></div></div><small>Electronics</small><h3><span class="ph">[Project name]</span></h3><p>Sleek product pages for gadgets and tech.</p><span class="lnk">View case study &rarr;</span></a>
+    <a class="case h" href="#contact"><div class="pic"><div class="s"><h4>Beautiful Spaces Start Here</h4><i></i><u></u></div><div class="m"></div></div><small>Home &amp; lifestyle</small><h3><span class="ph">[Project name]</span></h3><p>A warm redesign that showcases lifestyle products.</p><span class="lnk">View case study &rarr;</span></a>
+  </div>
+</section>
+</div>
+
+<div class="svc" id="services"><div class="w"><div class="top">
+  <div><p class="eye">My services</p><h2>How I Can Help You</h2></div>
+  <div class="sg">
+    <div><h3>Store Setup &amp; Launch</h3><p>Get your store up and running with a professional launch.</p></div>
+    <div><h3>Theme Installation &amp; Customization</h3><p>Tailor a theme to your brand for a unique storefront.</p></div>
+    <div><h3>Homepage &amp; Landing Pages</h3><p>Custom layouts that present your brand and guide shoppers.</p></div>
+    <div><h3>Product &amp; Collection Pages</h3><p>Clear pages designed to show products and encourage purchase.</p></div>
+    <div><h3>Store Redesign</h3><p>A fresh, modern look for your existing Shopify store.</p></div>
+    <div><h3>Mobile-Responsive Design</h3><p>A storefront that works perfectly on all devices.</p></div>
+    <div><h3>Product Uploads &amp; Catalog</h3><p>Add and organize your products for a better shopping experience.</p></div>
+    <div><h3>Navigation, Menus &amp; Collections</h3><p>Simple structure so customers find products fast.</p></div>
+    <div><h3>Essential App Integration</h3><p>Core Shopify apps set up and working with your store.</p></div>
+    <div><h3>Basic On-Page SEO</h3><p>Titles, descriptions and image text set up properly.</p></div>
+    <div><h3>Store Audits &amp; UX Improvements</h3><p>A review with clear, practical fixes.</p></div>
+    <div><h3>Testing &amp; Launch Assistance</h3><p>Device checks and a smooth, supported go-live.</p></div>
+  </div>
+  <p class="sn">Need something specific? Ask, and I’ll tell you honestly whether I can deliver it.</p>
+</div></div></div>
+
+<div class="w">
+<section id="process"><div class="sh"><div><p class="eye">How we work</p><h2>A Clear Process, Start to Finish</h2></div></div>
+  <div class="proc">
+    <div><h3>Discovery</h3><p>We discuss your brand, products and goals.</p></div>
+    <div><h3>Plan</h3><p>I outline the pages, structure and look.</p></div>
+    <div><h3>Design</h3><p>You review the design before it goes live.</p></div>
+    <div><h3>Build &amp; test</h3><p>I set up the store and test on every device.</p></div>
+    <div><h3>Launch</h3><p>We go live together, with handover support.</p></div>
+  </div>
+</section>
+
+<section id="about"><div class="about">
+  <div class="me"><span class="ph">[Add your photo]</span></div>
+  <div><p class="eye">About</p><h2>Hi, I’m Eniola.</h2>
+    <p>I design Shopify stores for entrepreneurs and brands who want to look professional and make shopping easy. <span class="ph">[Add your story, location and background.]</span></p>
+    <p>Whether you’re launching your first store or refreshing an existing one, I’ll guide you through every step in plain language.</p>
+    <p><span class="ph">[Optional: add a client testimonial once you have one.]</span></p></div>
+</div></section>
+
+<section><div class="sh"><div><p class="eye">FAQ</p><h2>Questions, Answered</h2></div></div>
+  <details><summary>Can you redesign my existing Shopify store?</summary><p>Yes. I can refresh the design, improve navigation and product pages, and make the store work better on mobile.</p></details>
+  <details><summary>Do I need to have my products ready?</summary><p>It helps to have photos and descriptions, but we can plan your catalog together at the start.</p></details>
+  <details><summary>Will I be able to edit the store myself?</summary><p>Yes. I build stores that are easy to manage and show you the basics at handover.</p></details>
+  <details><summary>How long does it take and what does it cost?</summary><p><span class="ph">[Add your typical timelines and starting prices.]</span></p></details>
+</section>
+
+<section id="contact" style="padding-bottom:0"><div class="cta">
+  <div><p class="eye" style="color:#A9A39A">Contact</p><h2>Let’s Build Your Shopify Store.</h2><p>Tell me about your brand and what you need. I’ll reply with next steps.</p>
+    <p><a href="mailto:you@example.com"><span class="ph">[your@email.com]</span></a><br><span class="ph">[Instagram]</span> &nbsp; <span class="ph">[LinkedIn]</span></p></div>
+  <form id="f"><label>Your name<input name="n" required></label><label>Store type<select name="t"><option>Fashion</option><option>Beauty and skincare</option><option>Electronics</option><option>Accessories</option><option>Lifestyle</option><option>Other</option></select></label>
+    <label>What do you need?<textarea name="m" required></textarea></label><button class="btn" type="submit">Send enquiry &rarr;</button></form>
+</div></section>
+</div>
+</main>
+<footer>© 2026 Eniola. All rights reserved.</footer>
+<script>
+document.getElementById("f").addEventListener("submit",function(e){e.preventDefault();var d=new FormData(e.target);
+location.href="mailto:you@example.com?subject="+encodeURIComponent("Shopify project enquiry")+"&body="+encodeURIComponent("Name: "+d.get("n")+"\nStore type: "+d.get("t")+"\n\n"+d.get("m"))});
+</script>
+</body>
+</html>
