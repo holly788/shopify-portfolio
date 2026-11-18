@@ -1,4 +1,4 @@
-/* EDIT: replace anything in [brackets] (class "ph") with your real details. */
+/* Holly Eniola Shopify portfolio styles. */
 :root{--bg:#F4F2EE;--bg2:#FBFAF8;--ink:#161616;--muted:#6B665E;--line:#DAD6CD;--dark:#1B1B1B;--on-ink:#fff;
   color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#141413;--bg2:#1B1B19;--ink:#F2EFE9;--muted:#A5A096;--line:#33312C;--dark:#0C0C0C;--on-ink:#141413;color-scheme:dark}}
@@ -100,3 +100,22 @@ footer{padding:0 0 2.5rem;color:var(--muted);font-size:.9rem;text-align:center}
 .case-gallery figcaption{padding:.7rem .9rem;font-size:.85rem;color:var(--muted)}
 .demo-note{margin-top:1.5rem;padding:1rem 1.2rem;background:var(--bg2);border-left:3px solid #B08A4F;color:var(--muted);font-size:.9rem}
 @media(max-width:700px){.case-study-copy,.case-gallery{grid-template-columns:1fr}.case-gallery figure.wide{grid-column:auto}.case-meta{display:grid;grid-template-columns:1fr 1fr}}
+
+/* Portfolio refinements */
+.work{grid-template-columns:minmax(0, 1fr);}
+.work .case{max-width:780px;}
+.me{aspect-ratio:1/1;max-width:22rem;margin:auto;border-radius:50%;overflow:hidden;background:#171716;border:8px solid #e9dfce;padding:1rem;}
+.me .monogram{width:100%;height:100%;object-fit:contain;display:block;}
+.testimonial{margin-top:1.5rem;padding:1.1rem 1.3rem;border-left:3px solid #b08a4f;background:var(--bg2);max-width:38rem;}
+.testimonial-summary{margin:.4rem 0;color:var(--ink);font:500 1.15rem/1.5 Newsreader,serif;}
+.testimonial-by{font-size:.85rem;margin:0;color:var(--muted);}
+@media(max-width:960px){.work{grid-template-columns:1fr;}.me{max-width:16rem;}}
+
+
+/* Live access details for the Haven & Hue portfolio demo */
+.demo-access{display:flex;align-items:center;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin:1.5rem 0 2rem;padding:1.2rem 1.35rem;border:1px solid var(--line);background:var(--soft);border-radius:14px}
+.demo-access .eye{margin:0 0 .25rem}
+.demo-access p{margin:.2rem 0}
+.demo-access .demo-password{flex-basis:100%;font-size:.9rem;color:var(--muted)}
+.demo-access code{padding:.18rem .45rem;border:1px solid var(--line);border-radius:5px;background:#fff;color:var(--ink);font-size:.95rem}
+@media(max-width:600px){.demo-access{align-items:flex-start}.demo-access .btn{width:100%;text-align:center}}
